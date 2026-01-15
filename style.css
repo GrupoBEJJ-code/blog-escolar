@@ -1,0 +1,109 @@
+*{
+  padding: 0;
+ margin: 0;
+}
+:root {
+  --azul-menu: #2F5F95;
+  --azul-menu-claro: #4B74A8;
+  --azul-hover: #3A6FB0;
+  --texto-branco: #FFFFFF;
+  --texto-suave: #DCE6F2;
+  --ativo: #AFC6E6;
+  --dourado: #F2C94C;
+}
+body {
+    background: #eaeaea;
+}
+
+/* Barra superior */
+.navbar {
+  background-color: var(--azul-menu);
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menu esquerdo */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a,
+.btn {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.menu a.active {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+/* Dropdown base */
+.dropdown {
+    position: relative;
+}
+
+/* Conteúdo dropdown */
+.dropdown-content {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    width: 200px;
+    border-radius: 6px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    
+    transition: all 0.25s ease;
+}
+
+/* Ativo */
+.dropdown-content.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Itens */
+.dropdown-content a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background: #f3f3f3;
+}
+
+/* Perfili */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}

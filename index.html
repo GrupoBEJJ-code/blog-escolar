@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Sistema Escolar</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Ola Josemar</h1>
+
+<header>
+  <div class="navbar">
+
+    <!-- MENU PRINCIPAL -->
+    <div class="menu">
+        <a href="#" data-page="inicio" class="active">Início</a>
+        <a href="#" data-page="publicacoes">Publicações</a>
+        <a href="#" data-page="associacao">Associação</a>
+        <a href="#" data-page="adm">Área ADM</a>
+    </div>
+
+    <!-- PERFIL ADMIN -->
+    <div class="dropdown">
+        <div class="profile" onclick="toggleAdmin()">
+            <img src="https://i.imgur.com/8Km9tLL.png">
+            <span>Olá, Admin ▾</span>
+        </div>
+
+        <!-- MENU ADMIN -->
+        <div id="adminMenu" class="dropdown-content">
+            <a href="#" data-action="perfil">Perfil</a>
+            <a href="#" data-action="config">Configurações</a>
+            <a href="#" data-action="seguranca">Segurança</a>
+            <a href="#" data-action="painel">Painel</a>
+            <a href="#" data-action="logout">Sair</a>
+        </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- CONTEÚDO DINÂMICO -->
+<main id="conteudo" class="conteudo"></main>
+
+<script src="Menu-Adimin.js"></script>
 </body>
 </html>
